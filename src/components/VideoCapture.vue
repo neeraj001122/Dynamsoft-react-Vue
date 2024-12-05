@@ -126,7 +126,7 @@ let cameraEnhancer: CameraEnhancer;
 let scanRegion = {
     x: 25,
     y: 25,
-    width: 30,
+    width: 50,
     height: 10,
     isMeasuredInPercentage: true
     };
