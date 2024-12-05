@@ -4,6 +4,7 @@ import "../dynamsoft.config";
 import { CameraEnhancer, CameraView } from "dynamsoft-camera-enhancer";
 import { CaptureVisionRouter } from "dynamsoft-capture-vision-router";
 import { MultiFrameResultCrossFilter } from "dynamsoft-utility";
+import { EnumEnhancedFeatures } from "dynamsoft-barcode-reader-bundle";
 
 const componentDestroyedErrorMsg = "VideoCapture Component Destroyed";
 
@@ -138,6 +139,7 @@ onMounted(async () => {
     if (isDestroyed) { throw Error(componentDestroyedErrorMsg); } // Check if component is destroyed after every async
 
     cameraEnhancer = await CameraEnhancer.createInstance(cameraView);
+    await cameraEnhancer.enableEnhancedFeatures(EnumEnhancedFeatures.EF_TAP_TO_FOCUS);
     if (isDestroyed) { throw Error(componentDestroyedErrorMsg); }
 
     // Get default UI and append it to DOM.
