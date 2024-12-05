@@ -9,7 +9,7 @@ CoreModule.engineResourcePaths.dbr = "https://cdn.jsdelivr.net/npm/dynamsoft-bar
  * To use the library, you need to first specify a license key using the API "initLicense()" as shown below.
  */
 
-LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", {
+LicenseManager.initLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAxODM2MjY5LVRYbFhaV0pRY205cSIsIm1haW5TZXJ2ZXJVUkwiOiJodHRwczovL21sdHMuZHluYW1zb2Z0LmNvbSIsIm9yZ2FuaXphdGlvbklEIjoiMTAxODM2MjY5Iiwic3RhbmRieVNlcnZlclVSTCI6Imh0dHBzOi8vc2x0cy5keW5hbXNvZnQuY29tIiwiY2hlY2tDb2RlIjotOTk1MTAxNjR9", {
   executeNow: true,
 });
 
