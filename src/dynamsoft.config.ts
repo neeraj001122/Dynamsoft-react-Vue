@@ -2,6 +2,7 @@ import { CoreModule } from "dynamsoft-core";
 import { LicenseManager } from "dynamsoft-license";
 import "dynamsoft-barcode-reader";
 
+
 // Configures the paths where the .wasm files and other necessary resources for modules are located.
 CoreModule.engineResourcePaths.rootDirectory = "https://cdn.jsdelivr.net/npm/";
 CoreModule.engineResourcePaths.dbr = "https://cdn.jsdelivr.net/npm/dynamsoft-barcode-reader-iv@10.4.20-iv-202411280000/dist/";

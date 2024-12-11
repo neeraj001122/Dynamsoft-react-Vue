@@ -141,6 +141,7 @@ onMounted(async () => {
     cameraEnhancer = await CameraEnhancer.createInstance(cameraView);
     await cameraEnhancer.enableEnhancedFeatures(EnumEnhancedFeatures.EF_TAP_TO_FOCUS);
     await cameraEnhancer.setResolution({width:1920, height:1080});
+
     if (isDestroyed) { throw Error(componentDestroyedErrorMsg); }
 
     // Get default UI and append it to DOM.
@@ -177,6 +178,10 @@ onMounted(async () => {
 
     // Open camera and start scanning single barcode.
     await cameraEnhancer.open();
+         cameraEnhancer.setZoom({
+    factor: 2
+});
+
     cameraView.setScanLaserVisible(true);
     if (isDestroyed) { throw Error(componentDestroyedErrorMsg); }
     await cvRouter.startCapturing("Dotcode");
