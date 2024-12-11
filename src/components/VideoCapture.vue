@@ -140,7 +140,7 @@ onMounted(async () => {
 
     cameraEnhancer = await CameraEnhancer.createInstance(cameraView);
     await cameraEnhancer.enableEnhancedFeatures(EnumEnhancedFeatures.EF_TAP_TO_FOCUS);
-    await cameraEnhancer.setResolution({width:1080, height:1920});
+    await cameraEnhancer.setResolution({width:1920, height:1080});
     if (isDestroyed) { throw Error(componentDestroyedErrorMsg); }
 
     // Get default UI and append it to DOM.
