@@ -21,7 +21,7 @@ const settings = {
       "ImageROIProcessingNameArray": [
         "roi_read_dotcode"
       ],
-      "Timeout": 500,
+      "Timeout": 700,
       "MaxParallelTasks":0
     }
   ],
@@ -92,17 +92,39 @@ const settings = {
           "BlockSizeX": 15,
           "BlockSizeY": 15,
           "EnableFillBinaryVacancy": 0,
-          "ThresholdCompensation": 25
+          "ThresholdCompensation": 10
         },
         {
           "Mode": "BM_LOCAL_BLOCK",
           "BlockSizeX": 21,
           "BlockSizeY": 21,
           "EnableFillBinaryVacancy": 0,
+          "ThresholdCompensation": 10,
+          "MorphOperation":"Erode",
+          "MorphOperationKernelSizeX":3,
+          "MorphOperationKernelSizeY":3,
+          "MorphShape":"Ellipse"
+        },
+        {
+          "Mode": "BM_LOCAL_BLOCK",
+          "BlockSizeX": 35,
+          "BlockSizeY": 35,
+          "EnableFillBinaryVacancy": 0,
+          "ThresholdCompensation": 10,
+          "MorphOperation":"Erode",
+          "MorphOperationKernelSizeX":3,
+          "MorphOperationKernelSizeY":3,
+          "MorphShape":"Ellipse"
+        },
+        {
+          "Mode": "BM_LOCAL_BLOCK",
+          "BlockSizeX": 45,
+          "BlockSizeY": 45,
+          "EnableFillBinaryVacancy": 0,
           "ThresholdCompensation": 25,
           "MorphOperation":"Erode",
-          "MorphOperationKernelSizeX":5,
-          "MorphOperationKernelSizeY":5,
+          "MorphOperationKernelSizeX":3,
+          "MorphOperationKernelSizeY":3,
           "MorphShape":"Ellipse"
         }
       ],
@@ -112,9 +134,6 @@ const settings = {
         }
       ],
       "GrayscaleTransformationModes": [
-        {
-          "Mode": "GTM_ORIGINAL"
-        },
         {
           "Mode": "GTM_INVERTED"
         }
