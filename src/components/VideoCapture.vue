@@ -136,6 +136,9 @@ const settings = {
       "GrayscaleTransformationModes": [
         {
           "Mode": "GTM_INVERTED"
+        },
+            {
+          "Mode": "GTM_ORIGINAL"
         }
       ]
     }
